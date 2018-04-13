@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE dotfuscator SYSTEM "http://www.preemptive.com/dotfuscator/dtd/dotfuscator_v2.1.dtd">
+<dotfuscator version="2.1">
+    <!--This is application generated code. Do not edit manually.-->
+    <propertylist>
+        <property name="droplocation" value="C:\Build Setups\Latest" />
+        <property name="outputdir" value="\bin\Release" />
+        <property name="inputdir" value="\bin\Release" />
+        <property name="tempdir" value="\bin\Release\Temp" />
+        <property name="solutionpath" value="C:\Build Sources"/>
+    </propertylist>
+    <global>
+        <option>debug</option>
+    </global>
+    <input>
+        <asmlist>
+            <inputassembly>
+                <option>honoroas</option>
+                <option>stripoa</option>
+                <option>library</option>
+                <file dir="${configdir}${inputdir}" name="Ayuda.BMS.Player.Core.dll" />
+            </inputassembly>
+            <inputassembly>
+                <option>honoroas</option>
+                <option>stripoa</option>
+                <option>library</option>
+                <file dir="${configdir}${inputdir}" name="Ayuda.BMS.Player.Data.dll" />
+            </inputassembly>
+            <inputassembly>
+                <option>honoroas</option>
+                <option>stripoa</option>
+                <option>library</option>
+                <file dir="${configdir}${inputdir}" name="Ayuda.BMS.Player.Interop.dll" />
+            </inputassembly>
+            <inputassembly>
+                <option>honoroas</option>
+                <option>stripoa</option>
+                <option>library</option>
+                <file dir="${configdir}${inputdir}" name="Ayuda.BMS.Player.Keys.dll" />
+            </inputassembly>
+            <inputassembly>
+                <option>honoroas</option>
+                <option>stripoa</option>
+                <option>library</option>
+                <file dir="${configdir}${inputdir}" name="Ayuda.BMS.Player.Services.Interfaces.dll" />
+            </inputassembly>
+            <inputassembly>
+                <option>honoroas</option>
+                <option>stripoa</option>
+                <option>library</option>
+                <file dir="${configdir}${inputdir}" name="Ayuda.BMS.Player.Shared.dll" />
+            </inputassembly>
+            <inputassembly>
+                <option>honoroas</option>
+                <option>stripoa</option>
+                <option>library</option>
+                <file dir="${configdir}${inputdir}" name="Ayuda.BMS.Player.SDK.dll" />
+            </inputassembly>
+            <inputassembly>
+                <option>honoroas</option>
+                <option>stripoa</option>
+                <option>library</option>
+                <file dir="${configdir}${inputdir}" name="Ayuda.BMS.Player.Utils.dll" />
+            </inputassembly>
+            <inputassembly>
+                <option>honoroas</option>
+                <option>stripoa</option>
+                <option>library</option>
+                <file dir="${configdir}${inputdir}" name="SplashPlayer.exe" />
+            </inputassembly>
+        </asmlist>
+    </input>
+    <output>
+        <file dir="${configdir}${outputdir}" />
+    </output>
+    <tempdir>
+        <file dir="${configdir}${tempdir}" />
+    </tempdir>
+    <renaming>
+        <option>enhancedOI</option>
+        <excludelist>
+            <namespace name="*.Properties" regex="true"/>
+            <namespace name="*.Resources" regex="true"/>
+        </excludelist>
+        <mapping>
+            <mapoutput overwrite="false">
+                <file dir="${droplocation}\Dotfuscated\SplashPlayer" name="Map.xml" />
+            </mapoutput>
+        </mapping>
+        <referencerulelist>
+            <referencerule rulekey="{D97286EB-CF80-4ae8-94D4-E90131E6D0D7}" />
+            <referencerule rulekey="{0D471A86-E98F-4493-849B-85BD4CC884A1}" />
+            <referencerule rulekey="{2B7E7C8C-A39A-4db8-9DFC-6AFD38509061}" />
+            <referencerule rulekey="{7D9C8B02-2383-420f-8740-A9760394C2C1}" />
+            <referencerule rulekey="{229FD6F8-5BCC-427b-8F72-A7A413ECDF1A}" />
+            <referencerule rulekey="{C9D9BF84-4F0D-4e9f-B3EC-3038235AE741}" />
+        </referencerulelist>
+    </renaming>
+    <controlflow level="high" />
+    <stringencrypt>
+        <includelist>
+            <namespace name="Ayuda.*" regex="true" />
+        </includelist>
+    </stringencrypt>
+    <removal>
+        <option>disable</option>
+        <removalreport overwrite="false">
+            <file dir="${droplocation}\Dotfuscated\DigitalPlayer" name="Removal.xml" />
+        </removalreport>
+        <referencerulelist />
+    </removal>
+    <signing>
+        <resign>
+            <option>dontuseattributes</option>
+            <key>
+                <file dir="${solutionpath}" name="BMS.snk" />
+            </key>
+        </resign>
+    </signing>
+    <licensing>
+        <option>disable</option>
+        <permutation name="" />
+        <product versionmask="revision" />
+        <nolicenseaction name="showactivation" />
+        <unlockingfeature name="" />
+    </licensing>
+    <smartobfuscation>
+        <smartobfuscationreport verbosity="none" />
+    </smartobfuscation>
+</dotfuscator>
